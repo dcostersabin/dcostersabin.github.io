@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dcoster</title>
+    <style>
+        :root {
+            --terminal-green: #00ff00;
+            --terminal-black: #000000;
+            --terminal-dark: #0a0a0a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--terminal-black);
+            color: var(--terminal-green);
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .terminal-window {
+            border: 1px solid var(--terminal-green);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: var(--terminal-dark);
+        }
+
+        .terminal-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .red { background-color: #ff5f56; }
+        .yellow { background-color: #ffbd2e; }
+        .green { background-color: #27c93f; }
+
+        .prompt::before {
+            content: "$ ";
+            color: var(--terminal-green);
+        }
+
+        .comment {
+            color: #3f3;
+            opacity: 0.7;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .skills-list {
+            list-style-type: none;
+        }
+
+        .skills-list li::before {
+            content: "> ";
+            color: var(--terminal-green);
+        }
+
+        .badge {
+            display: inline-block;
+            border: 1px solid var(--terminal-green);
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .terminal-window {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Terminal Window Header -->
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-button red"></div>
+                <div class="terminal-button yellow"></div>
+                <div class="terminal-button green"></div>
+            </div>
+            <div class="prompt">whoami</div>
+            <h1>Backend Developer (who avoids CSS at all costs)</h1>
+        </div>
+
+        <!-- About Section -->
+        <div class="terminal-window section">
+            <div class="prompt">cat about.txt</div>
+            <p>Backend developer who believes CSS is just a myth and frontend frameworks are conspiracy theories.</p>
+            <br>
+            <div class="prompt">ls skills/backend</div>
+            <div class="badges">
+                <span class="badge">Python</span>
+                <span class="badge">Rust</span>
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">Redis</span>
+                <span class="badge">Docker</span>
+                <span class="badge">Go</span>
+                <span class="badge">Ruby</span>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="terminal-window section">
+            <div class="prompt">cat skills.log</div>
+            <ul class="skills-list">
+                <li>Database optimization: 98%</li>
+                <li>API design: 95%</li>
+                <li>System architecture: 92%</li>
+                <li>CSS: 404 Not Found</li>
+                <li>Frontend: Loading... (eternally)</li>
+            </ul>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="terminal-window section">
+            <div class="prompt">ls ~/projects</div>
+            <ul class="skills-list">
+                <li>Amazing backend API (with ugly frontend)</li>
+                <li>Database that scales to infinity (and a UI that looks like Windows 95)</li>
+                <li>Microservices architecture (please don't ask about the UI)</li>
+            </ul>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p class="comment">/* This page intentionally left unstyled */</p>
+            <p class="comment">// TODO: Learn CSS (maybe next year)</p>
+        </div>
+    </div>
+</body>
+</html>
