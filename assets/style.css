@@ -271,7 +271,7 @@
         background-color: #8b756b;
         margin-top: -5%;
         margin-left: -3%;
-        height: 60vh;
+        /* height: 60vh; */
     }
     
     
@@ -335,6 +335,7 @@
     
     .email
     {
+        margin-right: 10%;
         color: #FFFFFF;
         
     }
@@ -379,7 +380,7 @@
 
     .wrapper-scroller{
         margin-left: 90%;
-        margin-top: -30%;
+        margin-top: -20%;
         padding: 1%;
         position: absolute;
         z-index: 2000;
